@@ -203,3 +203,53 @@ body {
     from { transform: translateY(-100px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+/* Novos Estilos */
+.product-section {
+    padding: 4rem 5%;
+}
+
+.product-section h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.dark-bg {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.sustainability-tabs {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.tab-btn {
+    background: none;
+    border: 1px solid var(--preto);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.sustainability-badge {
+    width: 120px;
+    height: auto;
+}
