@@ -67,3 +67,23 @@ window.addEventListener("click", (e) => {
         e.target.style.display = "none";
     }
 });
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+document.querySelector('.carousel-prev').addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+});
+
+document.querySelector('.carousel-next').addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+});
+
+// Auto-advance every 5 seconds
+setInterval(() => showSlide(currentSlide + 1), 5000);
