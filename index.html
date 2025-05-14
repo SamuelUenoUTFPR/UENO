@@ -20,14 +20,39 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Coleção Outono 2024: Tradição Reimaginada</h1>
-            <p>Peças atemporais em algodão orgânico e seda reciclada</p>
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-slide active">
+            <img src="assets/hero1.jpg" alt="Coleção Outono">
+            <div class="carousel-text">
+                <h2>Coleção Outono 2024</h2>
+                <p>Descubra a fusão entre tradição e inovação</p>
+            </div>
         </div>
+        <div class="carousel-slide">
+            <img src="assets/hero2.jpg" alt="Lançamentos Sustentáveis">
+            <div class="carousel-text">
+                <h2>Novos Materiais Ecológicos</h2>
+                <p>Conheça nossos tecidos 100% reciclados</p>
+            </div>
+        </div>
+        <button class="carousel-prev">❮</button>
+        <button class="carousel-next">❯</button>
     </section>
-
+    
+    <section class="product-carousel">
+    <h2>Destaques da Temporada</h2>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="product-card">
+                <img src="assets/produto1.jpg" alt="Jaqueta Samurai">
+                <h4>Jaqueta Samurai</h4>
+                <p>¥ 45.000</p>
+            </div>
+            <!-- Repetir 6-8 cards -->
+        </div>
+    </div>
+    </section>
     <!-- Seção Novidades -->
     <section class="product-section" id="novidades">
         <h2>🆕 Novos Lançamentos</h2>
@@ -70,17 +95,60 @@
 
     <!-- Rodapé Sustentável -->
     <footer class="footer">
+    <div class="footer-grid">
+        <!-- Seção Newsletter -->
         <div class="footer-section">
-            <h5>♻️ Nossos Compromissos</h5>
+            <h5>Receba Nossas Atualizações</h5>
+            <form class="footer-newsletter">
+                <input type="email" placeholder="Seu e-mail" required>
+                <button type="submit" class="btn-newsletter">Inscrever-se</button>
+            </form>
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-section">
+            <h5>Categorias</h5>
             <ul>
-                <li><a href="#politica">Moda Circular</a></li>
-                <li><a href="#artesao">Artesãos Parceiros</a></li>
-                <li><button id="openSustainabilityModal">Nosso Impacto</button></li>
+                <li><a href="#masculino">Masculino</a></li>
+                <li><a href="#feminino">Feminino</a></li>
+                <li><a href="#kids">Infantil</a></li>
+                <li><a href="#lifestyle">Estilo de Vida</a></li>
             </ul>
         </div>
+
+        <!-- Atendimento -->
         <div class="footer-section">
-            <img src="assets/selo-sustentavel.png" alt="Selo Carbono Neutro" class="sustainability-badge">
+            <h5>Atendimento</h5>
+            <ul>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#envios">Política de Envios</a></li>
+                <li><a href="#trocas">Trocas & Devoluções</a></li>
+                <li><a href="#privacidade">Privacidade</a></li>
+            </ul>
         </div>
+
+        <!-- Sustentabilidade -->
+        <div class="footer-section">
+            <h5>Sustentabilidade</h5>
+            <ul>
+                <li><a href="#materiais">Materiais</a></li>
+                <li><a href="#producao">Produção</a></li>
+                <li><a href="#comunidade">Comunidade</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="social-links">
+            <a href="#"><img src="assets/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="assets/facebook.svg" alt="Facebook"></a>
+        </div>
+        <div class="legal-links">
+            <a href="#politica">Política de Privacidade</a> | 
+            <a href="#termos">Termos de Serviço</a>
+        </div>
+        <p class="copyright">© 2024 UENO · Moda Sustentável Oriental</p>
+    </div>
     </footer>
 
     <!-- Modais -->
