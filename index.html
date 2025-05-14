@@ -1,43 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UENO - Moda Sustentável Oriental</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Meta tags e links de fontes anteriores -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<script>
-    // Espera o DOM carregar completamente
-    document.addEventListener("DOMContentLoaded", function() {
-        const modal = document.getElementById("newsletterModal");
-        const closeBtn = document.querySelector(".close-modal");
-
-        // Abre o modal após 1 segundo (ajuste o tempo conforme necessário)
-        setTimeout(() => {
-            modal.style.display = "flex";
-        }, 1000);
-
-        // Fecha ao clicar no X
-        closeBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        // Fecha ao clicar fora do modal
-        window.addEventListener("click", (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-
-        // Impede o submit do formulário (para teste)
-        document.querySelector(".modal-form").addEventListener("submit", (e) => {
-            e.preventDefault();
-            alert("Obrigado por assinar! Verifique seu e-mail.");
-            modal.style.display = "none";
-        });
-    });
-</script>
 <body>
     <!-- Cabeçalho -->
     <header class="header">
@@ -46,9 +12,10 @@
             <span class="latin">UENO</span>
         </div>
         <nav class="nav">
-            <a href="#colecoes">Coleções</a>
-            <a href="#missao">Missão</a>
-            <a href="#sustentabilidade">Sustentabilidade</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#masculino">Masculino</a>
+            <a href="#feminino">Feminino</a>
+            <a href="#" id="openSustainability">Sustentabilidade</a>
             <a href="login.html" class="btn-login">Login</a>
         </nav>
     </header>
@@ -56,73 +23,104 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Moda Consciente com Alma Japonesa</h1>
-            <p>Tecidos sustentáveis, designs atemporais</p>
-            <a href="#colecoes" class="btn">Explorar Coleção</a>
+            <h1>Coleção Outono 2024: Tradição Reimaginada</h1>
+            <p>Peças atemporais em algodão orgânico e seda reciclada</p>
         </div>
     </section>
 
-    <!-- Missão Sustentável -->
-    <section class="mission" id="missao">
-        <div class="mission-grid">
-            <div class="mission-card">
-                <div class="icon">🎋</div>
-                <h3>Materiais Reciclados</h3>
-                <p>Utilizamos 100% de algodão orgânico e poliéster reciclado</p>
+    <!-- Seção Novidades -->
+    <section class="product-section" id="novidades">
+        <h2>🆕 Novos Lançamentos</h2>
+        <div class="product-grid">
+            <!-- Cards de produtos (repetir estrutura) -->
+            <div class="product-card">
+                <img src="assets/novidade-1.jpg" alt="Casaco Kintsugi">
+                <h4>Casaco Kintsugi</h4>
+                <p>Reparo artesanal com fios de ouro reciclado</p>
+                <button class="btn">Comprar</button>
             </div>
-            <!-- Repetir mais 3 cards com ícones ♻️, 🌏, 🏭 -->
         </div>
     </section>
 
-    <!-- Produtos -->
-    <section class="products" id="colecoes">
-        <h2>Coleção Outono 2024</h2>
+    <!-- Seção Masculina -->
+    <section class="product-section dark-bg" id="masculino">
+        <h2>👔 Moda Masculina</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="assets/kimono.jpg" alt="Kimono Moderno">
-                <h4>Kimono Urbano</h4>
-                <p>Feito com seda reciclada | ¥34.000</p>
-                <button class="btn-comprar">Comprar</button>
+                <img src="assets/masculino-1.jpg" alt="Kimono Urbano">
+                <h4>Kimono Streetwear</h4>
+                <p>Algodão 100% orgânico | Tamanhos: P-XL</p>
+                <button class="btn">Ver Detalhes</button>
             </div>
-            <!-- Repetir mais 3 produtos -->
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- Seção Feminina -->
+    <section class="product-section" id="feminino">
+        <h2>👗 Moda Feminina</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/feminino-1.jpg" alt="Vestido Sakura">
+                <h4>Vestido Sakura</h4>
+                <p>Tingimento natural com pétalas de cerejeira</p>
+                <button class="btn">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Sustentável -->
     <footer class="footer">
         <div class="footer-section">
-            <h5>上野 Sustentabilidade</h5>
+            <h5>♻️ Nossos Compromissos</h5>
             <ul>
-                <li><a href="#politica">Política Ambiental</a></li>
-                <li><a href="#artesao">Artesãos Locais</a></li>
+                <li><a href="#politica">Moda Circular</a></li>
+                <li><a href="#artesao">Artesãos Parceiros</a></li>
+                <li><button id="openSustainabilityModal">Nosso Impacto</button></li>
             </ul>
         </div>
         <div class="footer-section">
-            <h5>Equipe</h5>
-            <ul>
-                <li><a href="[LINK_LINKEDIN]">Currículo - João</a></li>
-                <li><a href="[LINK_GITHUB]">Currículo - Maria</a></li>
-            </ul>
-        </div>
-        <div class="sustainability-stamp">
-            <span>炭素中立</span>
-            <p>Certificado Carbono Neutro</p>
+            <img src="assets/selo-sustentavel.png" alt="Selo Carbono Neutro" class="sustainability-badge">
         </div>
     </footer>
-    <!-- Modal de Newsletter -->
-    <div class="modal-overlay" id="newsletterModal">
+
+    <!-- Modais -->
+    <div class="modal-overlay" id="sustainabilityModal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h3>⛩️ Receba Coleções Exclusivas 🏮</h3>
-            <p>Cadastre-se para receber lançamentos sustentáveis e <strong>10% OFF</strong> na primeira compra!</p>
+            <h2>上野 Sustentabilidade</h2>
             
-            <form class="modal-form">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="btn">Assinar</button>
-            </form>
-    
-            <small>Oferecemos frete grátis para membros UENO 🚚</small>
+            <!-- Abas -->
+            <div class="sustainability-tabs">
+                <button class="tab-btn active" data-tab="materiais">Materiais</button>
+                <button class="tab-btn" data-tab="producao">Produção</button>
+                <button class="tab-btn" data-tab="comunidade">Comunidade</button>
+            </div>
+
+            <!-- Conteúdo das Abas -->
+            <div class="tab-content" id="materiais">
+                <h3>🌱 Materiais Responsáveis</h3>
+                <ul>
+                    <li>Algodão orgânico certificado</li>
+                    <li>Poliéster de garrafas PET recicladas</li>
+                    <li>Tingimentos naturais com índigo japonês</li>
+                </ul>
+                <img src="assets/tingimento-natural.jpg" alt="Tingimento Natural">
+            </div>
+
+            <div class="tab-content hidden" id="producao">
+                <h3>🏭 Produção Consciente</h3>
+                <p>Redução de 70% no desperdício de tecidos através de:</p>
+                <ul>
+                    <li>Padrões de corte computadorizados</li>
+                    <li>Reaproveitamento de retalhos</li>
+                </ul>
+            </div>
+
+            <!-- ... outras abas ... -->
         </div>
     </div>
+
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
