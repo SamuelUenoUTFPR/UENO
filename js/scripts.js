@@ -34,3 +34,36 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Controle de Redirecionamento
+document.getElementById("loginForm")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    // Validação Simulada
+    window.location.href = "index.html";
+});
+
+document.getElementById("signupForm")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    // Validação Simulada
+    alert("Cadastro realizado! Redirecionando...");
+    window.location.href = "index.html";
+});
+
+// Controle do Modal de Cadastro
+const signupModal = document.getElementById("signupModal");
+document.getElementById("openSignupModal")?.addEventListener("click", () => {
+    signupModal.style.display = "flex";
+});
+
+document.querySelectorAll(".close-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.closest(".modal-overlay").style.display = "none";
+    });
+});
+
+// Fechar Modal ao Clicar Fora
+window.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+        e.target.style.display = "none";
+    }
+});
