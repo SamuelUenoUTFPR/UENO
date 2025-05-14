@@ -194,3 +194,12 @@ body {
     border: 1px solid var(--preto);
     font-family: 'Montserrat', sans-serif;
 }
+
+.modal-content {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
