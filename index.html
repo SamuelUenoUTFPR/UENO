@@ -7,6 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+    // Abre o modal ao carregar a página
+    window.onload = function() {
+        document.getElementById('newsletterModal').style.display = 'flex';
+    };
+
+    // Fecha o modal ao clicar no X ou fora
+    document.querySelector('.close-modal').onclick = function() {
+        document.getElementById('newsletterModal').style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('newsletterModal')) {
+            document.getElementById('newsletterModal').style.display = 'none';
+        }
+    };
+</script>
 <body>
     <!-- Cabeçalho -->
     <header class="header">
