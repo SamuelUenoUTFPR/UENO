@@ -253,3 +253,78 @@ body {
     width: 120px;
     height: auto;
 }
+
+/* Estilos Específicos para Login */
+.login-main {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-container {
+    background: var(--branco);
+    border: 2px solid var(--preto);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 6px 6px 0 var(--vermelho);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.auth-form input {
+    padding: 0.8rem;
+    border: 1px solid var(--preto);
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--preto);
+    color: var(--preto);
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.auth-divider {
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.auth-divider span {
+    background: var(--branco);
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--preto);
+    z-index: 0;
+}
+
+.terms {
+    text-align: left;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
